@@ -1,112 +1,144 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Sean Fuller&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="relative min-h-screen text-slate-950 dark:text-slate-100 scroll-smooth">
+
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-40 blur-sm"
+        style={{ backgroundImage: "url('/Images/marsha.jpg')" }}
+      />
+
+      {/* Top Navigation */}
+      <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-white/70 dark:bg-slate-900/70 shadow-sm z-50">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-xl font-bold tracking-tight">Sean Fuller</h1>
+
+          <div className="flex gap-6 text-sm font-medium">
+            <a href="#summary" className="hover:text-blue-600 transition">Summary</a>
+            <a href="#skills" className="hover:text-blue-600 transition">Skills</a>
+            <a href="#experience" className="hover:text-blue-600 transition">Experience</a>
+            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Main Content */}
+      <div className="pt-28 px-6 pb-20">
+        <div className="max-w-4xl mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-xl rounded-xl p-10">
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          {/* Header */}
+          <header className="text-center mb-10">
+            <h2 className="text-4xl font-bold tracking-tight">Full‑Stack Software Engineer</h2>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">
+              King of Prussia, Pennsylvania
+            </p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <div className="flex justify-center gap-4 mt-4 text-blue-600">
+              <a href="https://www.linkedin.com" target="_blank" className="hover:underline">LinkedIn</a>
+              <a href="https://sfuller11.github.io" target="_blank" className="hover:underline">Portfolio</a>
+              <a href="mailto:seanf1018@yahoo.com" className="hover:underline">Email</a>
+              <a href="tel:2672747857" className="hover:underline">Phone</a>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            {/* Download Button */}
+            <div className="mt-6">
+              <Link
+                href="/Sean Fuller.pdf"
+                download
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+              >
+                Download Resume
+              </Link>
+            </div>
+          </header>
 
-        <a
-          href="https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-nextjs-hybrid"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Deploy your Next.js site to a public URL with Azure Static Web Apps.
-          </p>
-        </a>
+          {/* Summary */}
+          <section id="summary" className="mb-14 scroll-mt-24">
+            <h3 className="text-2xl font-semibold mb-3">Professional Summary</h3>
+            <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+              Full‑stack Software Engineer experienced in developing, supporting, and securing
+              enterprise-level web applications using C#, JavaScript, SQL Server, and modern AI tools
+              such as Microsoft Copilot and Claude Code. Strong foundation in object‑oriented
+              programming, UI/UX design, Agile/DevOps workflows, and cybersecurity. Proven ability to
+              refactor legacy systems, eliminate technical debt, and deliver scalable improvements.
+            </p>
+          </section>
+
+          {/* Skills */}
+          <section id="skills" className="mb-14 scroll-mt-24">
+            <h3 className="text-2xl font-semibold mb-3">Technical Skills</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
+              <div>
+                <h4 className="font-medium">Languages</h4>
+                <p>C#, JavaScript (ES6+), HTML5, CSS3, SQL, Ruby on Rails</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Frameworks</h4>
+                <p>.NET (3–9), ASP.NET, React, Vue, jQuery, Spring</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Databases</h4>
+                <p>SQL Server, MongoDB</p>
+              </div>
+              <div>
+                <h4 className="font-medium">Cloud & DevOps</h4>
+                <p>Azure AD/MFA, AWS, Docker, Kubernetes, CI/CD</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Experience */}
+          <section id="experience" className="mb-14 scroll-mt-24">
+            <h3 className="text-2xl font-semibold mb-3">Professional Experience</h3>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-bold">Software Engineer — UHS</h4>
+              <p className="text-gray-600 dark:text-gray-400">June 2022 – Present</p>
+              <ul className="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300 space-y-2">
+                <li>Modernized Item Request platform from .NET Framework 4.7 to .NET 9.</li>
+                <li>Enhanced SQL structures for multi‑user request handling.</li>
+                <li>Automated supply chain reporting using SQL + SSRS.</li>
+                <li>Built CI/CD workflows for IIS deployments.</li>
+                <li>Developed delegated access platform using Azure AD + Graph API.</li>
+                <li>Implemented MFA and Azure AD authentication across applications.</li>
+                <li>Leveraged Copilot + Claude for automation and knowledge agents.</li>
+              </ul>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-bold">Software Engineer Intern — UHS</h4>
+              <p className="text-gray-600 dark:text-gray-400">June 2021 – December 2021</p>
+              <ul className="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300 space-y-2">
+                <li>Built vendor identification application using .NET Core + SQL.</li>
+                <li>Refactored legacy codebases and developed new APIs.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold">Associate Client Services Representative — Hibbert Group</h4>
+              <p className="text-gray-600 dark:text-gray-400">May 2019 – August 2020</p>
+              <ul className="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300 space-y-2">
+                <li>Managed pharmaceutical orders with accuracy.</li>
+                <li>Validated client requests and documented requirements.</li>
+                <li>Maintained product specifications in company databases.</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section id="contact" className="scroll-mt-24">
+            <h3 className="text-2xl font-semibold mb-3">Contact</h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              Email: <a href="mailto:seanf1018@yahoo.com" className="text-blue-600">seanf1018@yahoo.com</a><br />
+              Phone: <a href="tel:2672747857" className="text-blue-600">267‑274‑7857</a>
+            </p>
+          </section>
+
+        </div>
       </div>
     </main>
   );
